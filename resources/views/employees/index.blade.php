@@ -15,6 +15,7 @@
                 <th>Salary</th>
                 <th>Status</th>
                 <th>Hired At</th>
+                <th>Department</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -57,6 +58,7 @@ function loadEmployees() {
                         <td>${emp.status}</td>
                         <td>${formattedDate}</td>
                         <td>${actionButtons}</td>
+                        <td>${emp.department ? emp.department.name : 'N/A'}</td>
                     </tr>`;
             });
         });

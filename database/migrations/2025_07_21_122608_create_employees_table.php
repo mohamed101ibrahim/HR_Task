@@ -21,7 +21,11 @@ return new class extends Migration
             $table->date('hired_at');
             $table->enum('status', ['active', 'inactive']);
             $table->softDeletes();
+            $table->foreignId('department_id')->constrained('departments')->onDelete('cascade');
             $table->timestamps();
+            $table->index('name');
+            $table->index('hired_at');
+            $table->index('status');
         });
     }
 
@@ -30,6 +34,12 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('employees', function (Blueprint $table) {
+            $table->dropIndex(['name']);
+            $table->dropIndex(['status']);
+            $table->dropIndex(['hired_at']);
+        });
+
         Schema::dropIfExists('employees');
     }
 };

@@ -14,7 +14,11 @@ class Employee extends Model
     protected $casts = [
         'hired_at' => 'datetime',
     ];
-
+    
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
     public function remove():bool
     {
         return $this->delete();

@@ -11,7 +11,7 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        $employees = Employee::withTrashed()->get();
+        $employees = Employee::withTrashed()->with('department')->get();
         return EmployeeResource::collection($employees);
     }
 
