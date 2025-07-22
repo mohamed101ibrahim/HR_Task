@@ -11,7 +11,9 @@ class Employee extends Model
         'name', 'email', 'phone', 'position', 'salary', 'hired_at', 'status'
     ];
     protected $dates = ['deleted_at'];
-
+    protected $casts = [
+        'hired_at' => 'datetime',
+    ];
 
     public function remove():bool
     {

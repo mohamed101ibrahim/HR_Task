@@ -23,6 +23,7 @@ class EmployeeResource extends JsonResource
             'salary' => $this->salary,
             'hired_at' => $this->hired_at,
             'status' => $this->status,
+            'deleted_at' => $this->deleted_at,
             'created_at' => $this->created_at->toDateTimeString(),
             'updated_at' => $this->updated_at->toDateTimeString(),
         ];

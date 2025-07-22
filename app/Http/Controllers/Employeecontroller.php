@@ -14,26 +14,23 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employee = Employee::all();
-        return EmployeeResource::collection($employee);
+        $employees = Employee::withTrashed()->get();
+        return view('employees.index', compact('employees'));
     }
 
+    public function create()
+    {
+        return view('employees.create');
+    }
    /**
      * Store a newly created resource in storage.
      */
     public function store(StoreEmployeeRequest $request)
     {
-        // DB::transaction(function () use ($request) {
-        //     Employee::create($request->validated());
-        // });
-
-        // return redirect()->route('employees.index')->with('success', 'Employee created successfully.');
         $employee = $request->StoreEmployee();
-        // return redirect()->route('employees.index')
-        // ->with('success', 'Employee created successfully.');
-        return response([
-            'employee' => new EmployeeResource($employee),
-        ]);
+
+        return redirect()->route('employees.index')
+            ->with('success', 'Employee created successfully.');
     }
 
 
@@ -42,17 +39,19 @@ class EmployeeController extends Controller
      */
     public function show(string $id)
     {
-        $employee = Employee::findOrFail($id);
-        return new EmployeeResource($employee);
+        $employee = Employee::withTrashed()->findOrFail($id);
+        return view('employees.show', compact('employee'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+    public function edit($id)
+{
+    $employee = Employee::findOrFail($id);
+    return view('employees.edit', compact('employee'));
+}
+
 
     /**
      * Update the specified resource in storage.
@@ -60,11 +59,8 @@ class EmployeeController extends Controller
     public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
         $employee = $request->UpdateEmployee($employee);
-        return response([
-            'employee' => new EmployeeResource($employee),
-        ]);
-        // return redirect()->route('employees.index')
-        // ->with('success', 'Employee updated successfully.');
+
+        return redirect()->route('employees.index')->with('success', 'Employee updated successfully.');
     }
 
     /**
@@ -72,12 +68,9 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        if($employee->remove()){
-            return response(['message' => 'employee deleted']);
-        }
-        return response(['error' => 'employee does not deleted'], 409);
+        $employee->delete();
 
-    // return redirect()->route('employees.index')->with('success', 'Employee soft-deleted.');
+        return response()->json(['message' => 'Employee soft deleted']);
     }
 
 
@@ -86,7 +79,8 @@ class EmployeeController extends Controller
         $employee = Employee::withTrashed()->findOrFail($id);
         $employee->restore();
 
-        return redirect()->route('employees.index')->with('success', 'Employee restored.');
+        return response()->json(['message' => 'Employee restored']);
     }
+
 
 }

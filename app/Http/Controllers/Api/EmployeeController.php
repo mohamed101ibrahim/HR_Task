@@ -11,7 +11,8 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        return EmployeeResource::collection(Employee::all());
+        $employees = Employee::withTrashed()->get();
+        return EmployeeResource::collection($employees);
     }
 
     public function store(StoreEmployeeRequest $request)
