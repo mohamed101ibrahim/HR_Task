@@ -27,11 +27,12 @@ class UpdateEmployeeRequest extends FormRequest
         return [
             'name' => 'sometimes|string|max:100',
             'email' => 'sometimes|email|unique:employees,email,' . $employeeId,
-            'phone' => 'sometimes|number|max:15',
+            'phone' => 'sometimes|string|min:8|max:15|regex:/^[0-9]+$/',
             'position' => 'sometimes|string',
             'salary' => 'sometimes|numeric|min:0',
             'hired_at' => 'sometimes|date',
             'status' => 'sometimes|in:active,inactive',
+            'department_id' => 'sometimes|integer|exists:departments,id',
         ];
     }
     public function updateEmployee(Employee $employee)
@@ -45,6 +46,7 @@ class UpdateEmployeeRequest extends FormRequest
                 'salary'    => $this->input('salary', $employee->salary),
                 'hired_at'  => $this->input('hired_at', $employee->hired_at),
                 'status'    => $this->input('status', $employee->status),
+                'department_id' =>$this->input('department_id', $employee->department_id),
             ]);
 
             return $employee->refresh();

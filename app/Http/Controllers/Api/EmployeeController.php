@@ -6,12 +6,27 @@ use App\Models\Employee;
 use App\Http\Resources\EmployeeResource;
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
+use App\Traits\FilterBySearch;
+use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function index()
+    use FilterBySearch;
+
+    public function index(Request $request)
     {
-        $employees = Employee::withTrashed()->with('department')->get();
+        $employees = Employee::withTrashed();
+
+        $filters = [
+            'name' => 'like',
+            'status' => 'exact',
+            'hired_at' => 'date',
+        ];
+
+        $employees = $this->applyFilters($employees, $request, $filters);
+
+        $employees = $employees->paginate(10);
+
         return EmployeeResource::collection($employees);
     }
 

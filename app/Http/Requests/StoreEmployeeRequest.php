@@ -26,11 +26,13 @@ class StoreEmployeeRequest extends FormRequest
         return [
             'name' => 'required|string|max:100',
             'email' => 'required|email|unique:employees,email',
-            'phone' => 'nullable|number|max:15',
+            'phone' => 'sometimes|string|min:8|max:15|regex:/^[0-9]+$/',
             'position' => 'required|string',
             'salary' => 'required|numeric|min:0',
             'hired_at' => 'required|date',
             'status' => 'required|in:active,inactive',
+            'department_id' => 'sometimes|integer|exists:departments,id',
+
         ];
     }
     public function prepareForValidation(): void
@@ -51,6 +53,9 @@ class StoreEmployeeRequest extends FormRequest
                 'salary' => $this->salary,
                 'hired_at' => $this->hired_at,
                 'status' => $this->status,
+                'department_id' =>  $this->department_id,
+
+
             ]);
             return $employee->refresh();
         });
