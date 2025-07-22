@@ -20,6 +20,7 @@ return new class extends Migration
             $table->decimal('salary', 10, 2);
             $table->date('hired_at');
             $table->enum('status', ['active', 'inactive']);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
