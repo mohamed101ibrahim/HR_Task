@@ -21,7 +21,7 @@
                 <td>{{ $emp->id }}</td>
                 <td>{{ $emp->name }}</td>
                 <td>{{ $emp->email }}</td>
-                <td>{{ $emp->hired_at }}</td>
+                <td>{{ $emp->hired_at->format('Y-m-d') }}</td>
             </tr>
         @empty
             <tr><td colspan="4">No employees found.</td></tr>

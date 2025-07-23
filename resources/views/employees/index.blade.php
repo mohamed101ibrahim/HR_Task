@@ -75,7 +75,7 @@ function loadEmployees() {
 
     const query = new URLSearchParams({ name, status, hired_at }).toString();
 
-    fetch(/api/employees?${query})
+    fetch(`/api/employees?${query}`)
         .then(response => response.json())
         .then(data => {
             const tbody = document.querySelector('#employeesTable tbody');
@@ -95,9 +95,11 @@ function loadEmployees() {
                 const rowClass = emp.deleted_at ? 'table-secondary' : '';
 
                 const actionButtons = emp.deleted_at
-                    ? <button class="btn btn-success btn-sm" onclick="restoreEmployee(${emp.id})">Restore</button>
-                    : `<a href="/employees/${emp.id}/edit" class="btn btn-primary btn-sm">Edit</a>
-                       <button class="btn btn-danger btn-sm" onclick="deleteEmployee(${emp.id})">Delete</button>`;
+                ? `<button class="btn btn-success btn-sm" onclick="restoreEmployee(${emp.id})">Restore</button>`
+                : `
+                    <a href="/employees/${emp.id}/edit" class="btn btn-primary btn-sm">Edit</a>
+                    <button class="btn btn-danger btn-sm" onclick="deleteEmployee(${emp.id})">Delete</button>
+                `;
 
                 tbody.innerHTML += `
                     <tr class="${rowClass}">
@@ -117,11 +119,11 @@ function loadEmployees() {
 }
 
 window.deleteEmployee = function(id) {
-    fetch(/api/employees/${id}, { method: 'DELETE' }).then(() => loadEmployees());
+    fetch(`/api/employees/${id}`, { method: 'DELETE' }).then(() => loadEmployees());
 };
 
 window.restoreEmployee = function(id) {
-    fetch(/api/employees/${id}/restore, { method: 'PATCH' }).then(() => loadEmployees());
+    fetch(`/api/employees/${id}/restore`, { method: 'PATCH' }).then(() => loadEmployees());
 };
 
 document.addEventListener('DOMContentLoaded', () => {
