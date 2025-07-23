@@ -27,7 +27,7 @@ class UpdateEmployeeRequest extends FormRequest
         return [
             'name' => 'sometimes|string|max:100',
             'email' => 'sometimes|email|unique:employees,email,' . $employeeId,
-            'phone' => 'sometimes|string|min:8|max:15|regex:/^[0-9]+$/',
+            'phone' => 'sometimes|string|min:8|max:15|regex:/^\+?[0-9]{10,20}$/',
             'position' => 'sometimes|string',
             'salary' => 'sometimes|numeric|min:0',
             'hired_at' => 'sometimes|date',

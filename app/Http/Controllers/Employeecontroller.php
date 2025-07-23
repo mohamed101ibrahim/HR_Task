@@ -26,7 +26,7 @@ class EmployeeController extends Controller
 
         $employees = $this->applyFilters($employees, $request, $filters);
 
-        $employees = $employees->paginate(10);
+        $employees = Employee::orderBy('id')->cursorPaginate(20);
 
         return view('employees.index', compact('employees'));
     }
