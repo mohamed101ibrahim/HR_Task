@@ -36,7 +36,10 @@
             <label>Position:</label>
             <input type="text" name="position" class="form-control" value="{{ old('position') }}" required>
         </div>
-
+        <div class="form-group">
+            <label>Department Name:</label>
+            <input type="text" name="department" class="form-control" value="{{ old('department') }}" required>
+        </div>
         <div class="form-group">
             <label>Salary:</label>
             <input type="number" name="salary" class="form-control" value="{{ old('salary') }}" required>
