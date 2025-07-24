@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Providers;
+
+use App\Models\Employee;
+use App\Observers\EmployeeObserver;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -20,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         parent::boot();
+        Employee::observe(EmployeeObserver::class);
 
         Route::middleware('api')
             ->prefix('api')

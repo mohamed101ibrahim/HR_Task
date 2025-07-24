@@ -7,7 +7,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('employees.index') }}">Employees</a>
+            <a class="navbar-brand" href="{{ route('employees.index') }}">HR SYSTEM</a>
         </div>
     </nav>
 

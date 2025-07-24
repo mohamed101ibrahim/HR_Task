@@ -5,6 +5,7 @@ use App\Models\Employee;
 use App\Http\Resources\EmployeeResource;
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
+use App\Models\Department;
 use App\Traits\FilterBySearch;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ class EmployeeController extends Controller
 
         $employees = $this->applyFilters($employees, $request, $filters);
 
+        $employees = $employees->paginate(20);
         $employees = Employee::orderBy('id')->cursorPaginate(20);
 
         return view('employees.index', compact('employees'));
@@ -33,7 +35,10 @@ class EmployeeController extends Controller
 
     public function create()
     {
-        return view('employees.create');
+        $departments = Department::all();
+        return view('employees.create', compact('departments'));
+
+        // return view('employees.create');
     }
    /**
      * Store a newly created resource in storage.
@@ -60,11 +65,19 @@ class EmployeeController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit($id)
-{
-    $employee = Employee::findOrFail($id);
-    return view('employees.edit', compact('employee'));
-}
+    {
+        $employee = Employee::findOrFail($id);
+        $departments = Department::all();
+            return view('employees.edit', compact('employee', 'departments'));
+        // return view('employees.edit', compact('employee'));
+    }
 
+    // public function edit($id)
+    // {
+    //     $employee = Employee::findOrFail($id);
+    //     $departments = Department::all(); // Fetch all departments
+
+    // }
 
     /**
      * Update the specified resource in storage.

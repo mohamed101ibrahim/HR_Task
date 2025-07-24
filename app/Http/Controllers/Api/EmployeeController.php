@@ -8,6 +8,7 @@ use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
 use App\Traits\FilterBySearch;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class EmployeeController extends Controller
 {
@@ -15,20 +16,25 @@ class EmployeeController extends Controller
 
     public function index(Request $request)
     {
-        $employees = Employee::withTrashed();
+        $cacheKey = 'employees_index_' . md5(json_encode($request->all()));
 
-        $filters = [
-            'name' => 'like',
-            'status' => 'exact',
-            'hired_at' => 'date',
-        ];
+        $employees = Cache::remember($cacheKey, 60, function () use ($request) {
+            $query = Employee::with(['department'])->withTrashed();
 
-        $employees = $this->applyFilters($employees, $request, $filters);
+            $filters = [
+                'name' => 'like',
+                'status' => 'exact',
+                'hired_at' => 'date',
+            ];
 
-        $employees = Employee::orderBy('id')->cursorPaginate(20);
+            $query = $this->applyFilters($query, $request, $filters);
+
+            return $query->paginate(10);
+        });
 
         return EmployeeResource::collection($employees);
     }
+
 
     public function store(StoreEmployeeRequest $request)
     {

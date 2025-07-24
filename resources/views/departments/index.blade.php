@@ -7,7 +7,7 @@
     <div class="mb-3">
         <input type="text" id="searchInput" class="form-control w-25 d-inline-block" placeholder="Search by name">
         <button class="btn btn-primary" id="searchBtn">Search</button>
-        <a href="{{ route('departments.create') }}" class="btn btn-success float-end">Create Department</a>
+        <a href="{{ route('departments.create') }}" class="btn btn-success float-end">+ Create Department</a>
     </div>
 
     <table class="table table-bordered" id="departmentsTable">
@@ -20,6 +20,22 @@
         </thead>
         <tbody></tbody>
     </table>
+    <div class="mt-4 d-flex justify-content-center">
+        <nav>
+            <ul class="pagination pagination-md gap-2">
+                @if ($departments->previousPageUrl())
+                    <li class="page-item">
+                        <a class="page-link px-4" href="{{ $departments->previousPageUrl() }}">« Previous</a>
+                    </li>
+                @endif
+                @if ($departments->nextPageUrl())
+                    <li class="page-item">
+                        <a class="page-link px-4" href="{{ $departments->nextPageUrl() }}">Next »</a>
+                    </li>
+                @endif
+            </ul>
+        </nav>
+    </div>
 </div>
 @endsection
 

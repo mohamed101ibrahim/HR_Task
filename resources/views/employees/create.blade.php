@@ -37,8 +37,12 @@
             <input type="text" name="position" class="form-control" value="{{ old('position') }}" required>
         </div>
         <div class="form-group">
-            <label>Department Name:</label>
-            <input type="text" name="department" class="form-control" value="{{ old('department') }}" required>
+            <label for="department_id">Department:</label>
+            <select name="department_id" class="form-control" required>
+                @foreach ($departments as $department)
+                  <option value="{{ $department->id }}">{{ $department->name }}</option>
+                @endforeach
+              </select>
         </div>
         <div class="form-group">
             <label>Salary:</label>

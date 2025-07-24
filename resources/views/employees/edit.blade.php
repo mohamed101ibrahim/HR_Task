@@ -29,6 +29,19 @@
         </div>
 
         <div class="mb-3">
+            <label>Department</label>
+            <select name="department_id" class="form-control" required>
+                <option value="">-- Select Department --</option>
+                @foreach ($departments as $department)
+                    <option value="{{ $department->id }}"
+                        {{ (old('department_id') ?? $employee->department_id) == $department->id ? 'selected' : '' }}>
+                        {{ $department->name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-3">
             <label>Salary</label>
             <input type="number" name="salary" class="form-control" value="{{ old('salary', $employee->salary) }}" required>
         </div>

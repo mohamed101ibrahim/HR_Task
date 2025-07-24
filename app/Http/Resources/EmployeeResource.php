@@ -26,6 +26,7 @@ class EmployeeResource extends JsonResource
             'deleted_at' => $this->deleted_at,
             'created_at' => $this->created_at->toDateTimeString(),
             'updated_at' => $this->updated_at->toDateTimeString(),
+            'department' => $this->whenLoaded('department'),
         ];
     }
 }

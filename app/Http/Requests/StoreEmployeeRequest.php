@@ -31,7 +31,7 @@ class StoreEmployeeRequest extends FormRequest
             'salary' => 'required|numeric|min:0',
             'hired_at' => 'required|date',
             'status' => 'required|in:active,inactive',
-            'department_id' => 'sometimes|integer|exists:departments,id',
+            'department_id' => 'required|exists:departments,id',
 
         ];
     }

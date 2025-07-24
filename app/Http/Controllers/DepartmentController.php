@@ -17,11 +17,13 @@ class DepartmentController extends Controller
     {
         $departments = Department::query();
 
-        if ($request->has('name') && $request->filled('name')) {
-            $departments->where('name', 'like', '%' . $request->name . '%');
-        }
+        $filters = [
+            'name' => 'like',
+        ];
+        $departments = $this->applyFilters($departments, $request, $filters);
+        $departments = $departments->orderBy('id', 'asc')->paginate(10);
 
-        $departments = $departments->paginate(10);
+        // $departments = $departments->paginate(10);
 
         return view('departments.index', compact('departments'));
     }

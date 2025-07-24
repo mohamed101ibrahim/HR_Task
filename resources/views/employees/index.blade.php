@@ -55,6 +55,22 @@
             </thead>
             <tbody></tbody>
         </table>
+        <div class="mt-4 d-flex justify-content-center">
+            <nav>
+                <ul class="pagination pagination-md gap-2">
+                    @if ($employees->previousPageUrl())
+                        <li class="page-item">
+                            <a class="page-link px-4" href="{{ $employees->previousPageUrl() }}">« Previous</a>
+                        </li>
+                    @endif
+                    @if ($employees->nextPageUrl())
+                    <li class="page-item">
+                        <a class="page-link px-4" href="{{ $employees->nextPageUrl() }}">Next »</a>
+                    </li>
+                @endif
+            </ul>
+        </nav>
+    </div>
         <div id="noResults" class="text-center text-muted py-4 d-none">
             <p>No employees found for the given search criteria.</p>
         </div>

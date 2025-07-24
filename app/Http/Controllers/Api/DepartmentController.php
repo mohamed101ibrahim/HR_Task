@@ -5,24 +5,29 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DepartmentRequest;
 use App\Models\Department;
+use App\Traits\FilterBySearch;
 use Illuminate\Http\Request;
 
 class DepartmentController extends Controller
 {
+    use FilterBySearch;
+
 
     public function index(Request $request)
     {
         $departments = Department::query();
 
-        if ($request->has('name') && $request->filled('name')) {
-            $departments->where('name', 'like', '%' . $request->name . '%');
-        }
+        $filters = [
+            'name' => 'like',
+        ];
+        $departments = $this->applyFilters($departments, $request, $filters);
+        $departments = $departments->orderBy('id', 'asc')->paginate(10);
 
-        return response()->json([
-            'data' => $departments->latest()->get(),
-        ]);
+        // $departments = $departments->latest()->paginate(10);
+
+        return response()->json($departments);
+
     }
-
 
     public function store(DepartmentRequest $request)
     {
