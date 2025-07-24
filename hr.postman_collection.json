@@ -1,0 +1,1290 @@
+{
+	"info": {
+		"_postman_id": "51eff61d-a82d-452a-a011-9b5a22ffbb64",
+		"name": "hr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22862949"
+	},
+	"item": [
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "get employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}employees/2",
+							"host": [
+								"{{base_url}}employees"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}employees/2",
+									"host": [
+										"{{base_url}}employees"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:50:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYHZGH2RRYB87EJSD72YBE"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Rick Lynch\",\n        \"email\": \"reichel.delphine@example.net\",\n        \"phone\": null,\n        \"position\": \"Transportation and Material-Moving\",\n        \"salary\": \"8089.82\",\n        \"hired_at\": \"1986-03-21T00:00:00.000000Z\",\n        \"status\": \"active\",\n        \"deleted_at\": null,\n        \"created_at\": \"2025-07-23 19:01:26\",\n        \"updated_at\": \"2025-07-23 23:54:55\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "all employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}employees",
+							"host": [
+								"{{base_url}}employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}employees",
+									"host": [
+										"{{base_url}}employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:48:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYDNE4MJSDSPSCQVN6FZW2"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Clifton Schiller\",\n            \"email\": \"tconsidine@example.com\",\n            \"phone\": 1157645050,\n            \"position\": \"Warehouseeeeee\",\n            \"salary\": \"3331.25\",\n            \"hired_at\": \"2010-04-10T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-24 00:33:19\",\n            \"department\": {\n                \"id\": 9,\n                \"name\": \"Weissnat Group\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Rick Lynch\",\n            \"email\": \"reichel.delphine@example.net\",\n            \"phone\": null,\n            \"position\": \"Transportation and Material-Moving\",\n            \"salary\": \"8089.82\",\n            \"hired_at\": \"1986-03-21T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:54:55\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Ricardo Cronaa\",\n            \"email\": \"marquise.kub@example.net\",\n            \"phone\": 1138855917,\n            \"position\": \"Music Director\",\n            \"salary\": \"12117.13\",\n            \"hired_at\": \"2007-03-06T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:42:55\",\n            \"department\": {\n                \"id\": 1,\n                \"name\": \"Jacobi Ltdd\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-24T00:41:09.000000Z\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Carolyn Ortiz DVM\",\n            \"email\": \"jarod67@example.com\",\n            \"phone\": 1148384610,\n            \"position\": \"Home Health Aide\",\n            \"salary\": \"13856.33\",\n            \"hired_at\": \"2019-02-06T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:43:16\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Jo Langworth\",\n            \"email\": \"caroline.hand@example.com\",\n            \"phone\": 1162097882,\n            \"position\": \"Plate Finisher\",\n            \"salary\": \"13465.16\",\n            \"hired_at\": \"1983-07-14T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:55:43\",\n            \"department\": {\n                \"id\": 2,\n                \"name\": \"Aufderhar, Price and Heidenreich\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Jacey Kuphal234\",\n            \"email\": \"michelle.legros@example.net\",\n            \"phone\": 1113897808,\n            \"position\": \"Food Batchmaker\",\n            \"salary\": \"14484.84\",\n            \"hired_at\": \"2003-12-14T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:55:53\",\n            \"department\": {\n                \"id\": 2,\n                \"name\": \"Aufderhar, Price and Heidenreich\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Lourdes Weimann\",\n            \"email\": \"sadie.price@example.net\",\n            \"phone\": null,\n            \"position\": \"Buffing and Polishing Operator\",\n            \"salary\": \"3567.71\",\n            \"hired_at\": \"2020-06-01T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 19:01:26\",\n            \"department\": {\n                \"id\": 2,\n                \"name\": \"Aufderhar, Price and Heidenreich\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Mr. Mohammad Wunsch\",\n            \"email\": \"lubowitz.ruby@example.net\",\n            \"phone\": null,\n            \"position\": \"Marine Cargo Inspector\",\n            \"salary\": \"5124.66\",\n            \"hired_at\": \"1979-03-27T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 19:01:26\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Dr. Buster Bernhard II\",\n            \"email\": \"gladyce95@example.com\",\n            \"phone\": 1176915035,\n            \"position\": \"Power Distributors OR Dispatcher\",\n            \"salary\": \"5394.69\",\n            \"hired_at\": \"1998-01-22T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 19:01:26\",\n            \"department\": {\n                \"id\": 2,\n                \"name\": \"Aufderhar, Price and Heidenreich\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Delphine Renner\",\n            \"email\": \"bconn@example.org\",\n            \"phone\": null,\n            \"position\": \"Pipefitter\",\n            \"salary\": \"13354.10\",\n            \"hired_at\": \"1976-06-28T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 19:01:26\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/employees?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/employees?page=1002\",\n        \"prev\": null,\n        \"next\": \"http://127.0.0.1:8000/api/employees?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1002,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=8\",\n                \"label\": \"8\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=9\",\n                \"label\": \"9\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=10\",\n                \"label\": \"10\",\n                \"active\": false\n            },\n            {\n                \"url\": null,\n                \"label\": \"...\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=1001\",\n                \"label\": \"1001\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=1002\",\n                \"label\": \"1002\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/employees\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 10011\n    }\n}"
+						},
+						{
+							"name": "filter by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}employees?name=tho",
+									"host": [
+										"{{base_url}}employees"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "tho"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:50:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYJVZGP5QV5GVKMBWF11M6"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 464,\n            \"name\": \"Mrs. Reyna Thompson\",\n            \"email\": \"pete.nader@example.org\",\n            \"phone\": null,\n            \"position\": \"Electronics Engineering Technician\",\n            \"salary\": \"14436.03\",\n            \"hired_at\": \"1977-01-25T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:48\",\n            \"updated_at\": \"2025-07-23 21:30:48\",\n            \"department\": {\n                \"id\": 13,\n                \"name\": \"Collins, Hessel and Conroy\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 610,\n            \"name\": \"Patrick Thompson\",\n            \"email\": \"araceli53@example.net\",\n            \"phone\": null,\n            \"position\": \"Radiologic Technician\",\n            \"salary\": \"12222.31\",\n            \"hired_at\": \"1970-09-16T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:48\",\n            \"updated_at\": \"2025-07-23 21:30:48\",\n            \"department\": {\n                \"id\": 31,\n                \"name\": \"Carter, Abbott and Bradtke\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 1079,\n            \"name\": \"Maya Thompson\",\n            \"email\": \"makayla72@example.com\",\n            \"phone\": null,\n            \"position\": \"Agricultural Sales Representative\",\n            \"salary\": \"6286.35\",\n            \"hired_at\": \"1986-11-25T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:48\",\n            \"updated_at\": \"2025-07-23 21:30:48\",\n            \"department\": {\n                \"id\": 29,\n                \"name\": \"Weber Inc\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 1247,\n            \"name\": \"Maegan Thompson\",\n            \"email\": \"betsy.langworth@example.net\",\n            \"phone\": 1126424680,\n            \"position\": \"Oil and gas Operator\",\n            \"salary\": \"6100.16\",\n            \"hired_at\": \"1995-10-01T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:48\",\n            \"updated_at\": \"2025-07-23 21:30:48\",\n            \"department\": {\n                \"id\": 21,\n                \"name\": \"Kling, Homenick and Kovacek\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 1420,\n            \"name\": \"Bartholome Beer\",\n            \"email\": \"dietrich.oleta@example.com\",\n            \"phone\": null,\n            \"position\": \"Automotive Technician\",\n            \"salary\": \"9180.36\",\n            \"hired_at\": \"2003-04-28T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:49\",\n            \"updated_at\": \"2025-07-23 21:30:49\",\n            \"department\": {\n                \"id\": 7,\n                \"name\": \"Leuschke LLC\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 1436,\n            \"name\": \"Dr. Anthony Keebler\",\n            \"email\": \"jaida80@example.com\",\n            \"phone\": 1150281164,\n            \"position\": \"Scanner Operator\",\n            \"salary\": \"3940.04\",\n            \"hired_at\": \"1985-07-18T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:49\",\n            \"updated_at\": \"2025-07-23 21:30:49\",\n            \"department\": {\n                \"id\": 27,\n                \"name\": \"Koelpin Inc\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 1861,\n            \"name\": \"Erich Thompson II\",\n            \"email\": \"moore.justice@example.org\",\n            \"phone\": null,\n            \"position\": \"Air Traffic Controller\",\n            \"salary\": \"4650.62\",\n            \"hired_at\": \"2016-05-08T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:49\",\n            \"updated_at\": \"2025-07-23 21:30:49\",\n            \"department\": {\n                \"id\": 30,\n                \"name\": \"Klein-Gorczany\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 2034,\n            \"name\": \"Aiden Thompson MD\",\n            \"email\": \"simonis.mose@example.com\",\n            \"phone\": null,\n            \"position\": \"Electrical Sales Representative\",\n            \"salary\": \"12224.37\",\n            \"hired_at\": \"2005-12-12T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:49\",\n            \"updated_at\": \"2025-07-23 21:30:49\",\n            \"department\": {\n                \"id\": 14,\n                \"name\": \"Jenkins, Wisoky and Funk\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 2131,\n            \"name\": \"Dr. Johnathon Pacocha DVM\",\n            \"email\": \"rashawn.stoltenberg@example.com\",\n            \"phone\": 1137416975,\n            \"position\": \"Mixing and Blending Machine Operator\",\n            \"salary\": \"6907.13\",\n            \"hired_at\": \"1984-03-02T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:49\",\n            \"updated_at\": \"2025-07-23 21:30:49\",\n            \"department\": {\n                \"id\": 21,\n                \"name\": \"Kling, Homenick and Kovacek\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 3127,\n            \"name\": \"Kenton Thompson\",\n            \"email\": \"bode.torey@example.net\",\n            \"phone\": 1123624301,\n            \"position\": \"Fitness Trainer\",\n            \"salary\": \"7040.73\",\n            \"hired_at\": \"2009-06-23T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:50\",\n            \"updated_at\": \"2025-07-23 21:30:50\",\n            \"department\": {\n                \"id\": 14,\n                \"name\": \"Jenkins, Wisoky and Funk\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/employees?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/employees?page=4\",\n        \"prev\": null,\n        \"next\": \"http://127.0.0.1:8000/api/employees?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 4,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/employees\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 38\n    }\n}"
+						},
+						{
+							"name": "filter by statue",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}employees",
+									"host": [
+										"{{base_url}}employees"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "tho",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:51:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYMCYX11HAZCZ9AJM5AVF7"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Rick Lynch\",\n            \"email\": \"reichel.delphine@example.net\",\n            \"phone\": null,\n            \"position\": \"Transportation and Material-Moving\",\n            \"salary\": \"8089.82\",\n            \"hired_at\": \"1986-03-21T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:54:55\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Ricardo Cronaa\",\n            \"email\": \"marquise.kub@example.net\",\n            \"phone\": 1138855917,\n            \"position\": \"Music Director\",\n            \"salary\": \"12117.13\",\n            \"hired_at\": \"2007-03-06T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:42:55\",\n            \"department\": {\n                \"id\": 1,\n                \"name\": \"Jacobi Ltdd\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-24T00:41:09.000000Z\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Jacey Kuphal234\",\n            \"email\": \"michelle.legros@example.net\",\n            \"phone\": 1113897808,\n            \"position\": \"Food Batchmaker\",\n            \"salary\": \"14484.84\",\n            \"hired_at\": \"2003-12-14T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:55:53\",\n            \"department\": {\n                \"id\": 2,\n                \"name\": \"Aufderhar, Price and Heidenreich\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Lourdes Weimann\",\n            \"email\": \"sadie.price@example.net\",\n            \"phone\": null,\n            \"position\": \"Buffing and Polishing Operator\",\n            \"salary\": \"3567.71\",\n            \"hired_at\": \"2020-06-01T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 19:01:26\",\n            \"department\": {\n                \"id\": 2,\n                \"name\": \"Aufderhar, Price and Heidenreich\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Cornelius Windler\",\n            \"email\": \"halle.graham@example.org\",\n            \"phone\": 1137872737,\n            \"position\": \"Mechanical Drafter\",\n            \"salary\": \"7776.20\",\n            \"hired_at\": \"1976-01-06T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:47\",\n            \"updated_at\": \"2025-07-23 21:30:47\",\n            \"department\": {\n                \"id\": 2,\n                \"name\": \"Aufderhar, Price and Heidenreich\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Brandi Reynolds MD\",\n            \"email\": \"ricardo.bernier@example.org\",\n            \"phone\": 1106274026,\n            \"position\": \"Tractor Operator\",\n            \"salary\": \"5074.97\",\n            \"hired_at\": \"1979-07-20T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:47\",\n            \"updated_at\": \"2025-07-23 21:30:47\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Dianna Grady\",\n            \"email\": \"fredrick.bernier@example.net\",\n            \"phone\": 1153750714,\n            \"position\": \"Nutritionist\",\n            \"salary\": \"4884.80\",\n            \"hired_at\": \"1976-10-08T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:47\",\n            \"updated_at\": \"2025-07-23 21:30:47\",\n            \"department\": {\n                \"id\": 20,\n                \"name\": \"Macejkovic-Koss\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Mrs. Miracle O'Connell III\",\n            \"email\": \"xbogisich@example.net\",\n            \"phone\": null,\n            \"position\": \"Kindergarten Teacher\",\n            \"salary\": \"8358.42\",\n            \"hired_at\": \"1999-01-18T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:47\",\n            \"updated_at\": \"2025-07-23 21:30:47\",\n            \"department\": {\n                \"id\": 17,\n                \"name\": \"Koepp-Senger\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Mr. Jermey Leannon\",\n            \"email\": \"sanford.grant@example.org\",\n            \"phone\": 1184026193,\n            \"position\": \"Technical Program Manager\",\n            \"salary\": \"6146.64\",\n            \"hired_at\": \"1971-08-22T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:47\",\n            \"updated_at\": \"2025-07-23 21:30:47\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Jaclyn Carter\",\n            \"email\": \"jkuhn@example.net\",\n            \"phone\": 1128010940,\n            \"position\": \"Insulation Worker\",\n            \"salary\": \"5740.03\",\n            \"hired_at\": \"1981-04-17T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 21:30:47\",\n            \"updated_at\": \"2025-07-23 21:30:47\",\n            \"department\": {\n                \"id\": 18,\n                \"name\": \"Rowe-Haag\",\n                \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n                \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/employees?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/employees?page=505\",\n        \"prev\": null,\n        \"next\": \"http://127.0.0.1:8000/api/employees?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 505,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=8\",\n                \"label\": \"8\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=9\",\n                \"label\": \"9\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=10\",\n                \"label\": \"10\",\n                \"active\": false\n            },\n            {\n                \"url\": null,\n                \"label\": \"...\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=504\",\n                \"label\": \"504\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=505\",\n                \"label\": \"505\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/employees\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 5046\n    }\n}"
+						},
+						{
+							"name": "filter by hire_date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}employees?hired_at=1986-03-21",
+									"host": [
+										"{{base_url}}employees"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "tho",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"disabled": true
+										},
+										{
+											"key": "hired_at",
+											"value": "1986-03-21"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:53:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYR2TXQ405B8YAGK78BDHK"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Rick Lynch\",\n            \"email\": \"reichel.delphine@example.net\",\n            \"phone\": null,\n            \"position\": \"Transportation and Material-Moving\",\n            \"salary\": \"8089.82\",\n            \"hired_at\": \"1986-03-21T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"created_at\": \"2025-07-23 19:01:26\",\n            \"updated_at\": \"2025-07-23 23:54:55\",\n            \"department\": {\n                \"id\": 3,\n                \"name\": \"Hackett-Schamberger\",\n                \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n                \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/employees?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/employees?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/employees?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/employees\",\n        \"per_page\": 10,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mohamed\",\r\n    \"email\": \"mohamedibrahim@example.com\",\r\n    \"position\": \"Manager\",\r\n    \"phone\":\"01157645050\",\r\n    \"salary\": 5000,\r\n    \"hired_at\": \"2024-01-01\",\r\n    \"status\": \"active\",\r\n    \"department_id\":6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}employees",
+							"host": [
+								"{{base_url}}employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mohamed\",\r\n    \"email\": \"mohamedibrahim@example.com\",\r\n    \"position\": \"Manager\",\r\n    \"phone\":\"01157645050\",\r\n    \"salary\": 5000,\r\n    \"hired_at\": \"2024-01-01\",\r\n    \"status\": \"active\",\r\n    \"department_id\":6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}employees",
+									"host": [
+										"{{base_url}}employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:49:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYGC99DJ08QNQD374Y8R1Q"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 10012,\n    \"name\": \"mohamed\",\n    \"email\": \"mohamedibrahim@example.com\",\n    \"phone\": 1157645050,\n    \"position\": \"Manager\",\n    \"salary\": \"5000.00\",\n    \"hired_at\": \"2024-01-01T00:00:00.000000Z\",\n    \"status\": \"active\",\n    \"deleted_at\": null,\n    \"created_at\": \"2025-07-24 00:49:34\",\n    \"updated_at\": \"2025-07-24 00:49:34\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mohamed ibrahim\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}employees/2",
+							"host": [
+								"{{base_url}}employees"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mohamed ibrahim\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}employees/2",
+									"host": [
+										"{{base_url}}employees"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:55:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYTDZ9B6TTREM8X4GV9JN1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"mohamed ibrahim\",\n    \"email\": \"reichel.delphine@example.net\",\n    \"phone\": null,\n    \"position\": \"Transportation and Material-Moving\",\n    \"salary\": \"8089.82\",\n    \"hired_at\": \"1986-03-21T00:00:00.000000Z\",\n    \"status\": \"active\",\n    \"deleted_at\": null,\n    \"created_at\": \"2025-07-23 19:01:26\",\n    \"updated_at\": \"2025-07-24 00:55:04\"\n}"
+						}
+					]
+				},
+				{
+					"name": "restore",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}employees/5/restore",
+							"host": [
+								"{{base_url}}employees"
+							],
+							"path": [
+								"5",
+								"restore"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}employees/5/restore",
+									"host": [
+										"{{base_url}}employees"
+									],
+									"path": [
+										"5",
+										"restore"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:56:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYX2T6NEN80MFK1E777MHV"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Employee restored successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}employees/6",
+							"host": [
+								"{{base_url}}employees"
+							],
+							"path": [
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}employees/6",
+									"host": [
+										"{{base_url}}employees"
+									],
+									"path": [
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 00:55:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WYVAJKVQW9QZZDS13TR9V1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"employee deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "get department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}departments/2",
+							"host": [
+								"{{base_url}}departments"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}departments/2",
+									"host": [
+										"{{base_url}}departments"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 01:02:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WZ8PAN8GP4XCCBR3NQC1E4"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Aufderhar, Price and Heidenreich\",\n        \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n        \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "all departments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}departments?name=t",
+							"host": [
+								"{{base_url}}departments"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "t"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}departments",
+									"host": [
+										"{{base_url}}departments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 01:03:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WZA1WVSBZVKVZ6GG1ESYQ4"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Jacobi Ltdd\",\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:41:09.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Aufderhar, Price and Heidenreich\",\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Hackett-Schamberger\",\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Jaskolski Group\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Schulist, Quigley and Pfannerstill\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Stroman-Pouros\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Leuschke LLC\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Larkin, Mertz and Veum\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Weissnat Group\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Kertzmann PLC\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/departments?page=1\",\n    \"from\": 1,\n    \"last_page\": 4,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/departments?page=4\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=3\",\n            \"label\": \"3\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=4\",\n            \"label\": \"4\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://127.0.0.1:8000/api/departments?page=2\",\n    \"path\": \"http://127.0.0.1:8000/api/departments\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 33\n}"
+						},
+						{
+							"name": "filter by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}departments?name=t",
+									"host": [
+										"{{base_url}}departments"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "t"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 01:04:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WZC7QVPQXJHV3EB1N5192N"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Jacobi Ltdd\",\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:41:09.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Hackett-Schamberger\",\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Schulist, Quigley and Pfannerstill\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Stroman-Pouros\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Larkin, Mertz and Veum\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Weissnat Group\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Kertzmann PLC\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Prosacco-Goyette\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Mraz-Effertz\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Thompson-Schinner\",\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/departments?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/departments?page=2\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/departments?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://127.0.0.1:8000/api/departments?page=2\",\n    \"path\": \"http://127.0.0.1:8000/api/departments\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 14\n}"
+						}
+					]
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"IT\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}departments",
+							"host": [
+								"{{base_url}}departments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"name\": \"IT\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}departments",
+									"host": [
+										"{{base_url}}departments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 01:05:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WZE63B2YQDBVX2F6TEMK60"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department created successfully.\",\n    \"data\": {\n        \"name\": \"IT\",\n        \"updated_at\": \"2025-07-24T01:05:51.000000Z\",\n        \"created_at\": \"2025-07-24T01:05:51.000000Z\",\n        \"id\": 34\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Help desk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}departments/34",
+							"host": [
+								"{{base_url}}departments"
+							],
+							"path": [
+								"34"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Help desk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}departments/34",
+									"host": [
+										"{{base_url}}departments"
+									],
+									"path": [
+										"34"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 01:06:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WZG6XG8X5JYVT9VBPJ8PBB"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department updated successfully.\",\n    \"data\": {\n        \"id\": 34,\n        \"name\": \"Help desk\",\n        \"created_at\": \"2025-07-24T01:05:51.000000Z\",\n        \"updated_at\": \"2025-07-24T01:06:58.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}departments/33",
+							"host": [
+								"{{base_url}}departments"
+							],
+							"path": [
+								"33"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}departments/33",
+									"host": [
+										"{{base_url}}departments"
+									],
+									"path": [
+										"33"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 01:07:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01K0WZHKVTC2TK8DQWT9TYVQQ5"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department deleted successfully.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "test-offset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}test-offset",
+					"host": [
+						"{{base_url}}test-offset"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}test-offset",
+							"host": [
+								"{{base_url}}test-offset"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 24 Jul 2025 00:59:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "01K0WZ2AG002VS6GT3AF8AEK82"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"method\": \"offset\",\n    \"time\": 0.07626795768737793,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Clifton Schiller\",\n            \"email\": \"tconsidine@example.com\",\n            \"phone\": 1157645050,\n            \"position\": \"Warehouseeeeee\",\n            \"salary\": \"3331.25\",\n            \"hired_at\": \"2010-04-10T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 9,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:33:19.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"mohamed ibrahim\",\n            \"email\": \"reichel.delphine@example.net\",\n            \"phone\": null,\n            \"position\": \"Transportation and Material-Moving\",\n            \"salary\": \"8089.82\",\n            \"hired_at\": \"1986-03-21T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:55:04.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Ricardo Cronaa\",\n            \"email\": \"marquise.kub@example.net\",\n            \"phone\": 1138855917,\n            \"position\": \"Music Director\",\n            \"salary\": \"12117.13\",\n            \"hired_at\": \"2007-03-06T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 1,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T23:42:55.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Carolyn Ortiz DVM\",\n            \"email\": \"jarod67@example.com\",\n            \"phone\": 1148384610,\n            \"position\": \"Home Health Aide\",\n            \"salary\": \"13856.33\",\n            \"hired_at\": \"2019-02-06T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T23:43:16.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Jo Langworth\",\n            \"email\": \"caroline.hand@example.com\",\n            \"phone\": 1162097882,\n            \"position\": \"Plate Finisher\",\n            \"salary\": \"13465.16\",\n            \"hired_at\": \"1983-07-14T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:56:31.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Lourdes Weimann\",\n            \"email\": \"sadie.price@example.net\",\n            \"phone\": null,\n            \"position\": \"Buffing and Polishing Operator\",\n            \"salary\": \"3567.71\",\n            \"hired_at\": \"2020-06-01T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Mr. Mohammad Wunsch\",\n            \"email\": \"lubowitz.ruby@example.net\",\n            \"phone\": null,\n            \"position\": \"Marine Cargo Inspector\",\n            \"salary\": \"5124.66\",\n            \"hired_at\": \"1979-03-27T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Dr. Buster Bernhard II\",\n            \"email\": \"gladyce95@example.com\",\n            \"phone\": 1176915035,\n            \"position\": \"Power Distributors OR Dispatcher\",\n            \"salary\": \"5394.69\",\n            \"hired_at\": \"1998-01-22T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Delphine Renner\",\n            \"email\": \"bconn@example.org\",\n            \"phone\": null,\n            \"position\": \"Pipefitter\",\n            \"salary\": \"13354.10\",\n            \"hired_at\": \"1976-06-28T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Cornelius Windler\",\n            \"email\": \"halle.graham@example.org\",\n            \"phone\": 1137872737,\n            \"position\": \"Mechanical Drafter\",\n            \"salary\": \"7776.20\",\n            \"hired_at\": \"1976-01-06T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Johan Gaylord\",\n            \"email\": \"ugoldner@example.net\",\n            \"phone\": 1190637605,\n            \"position\": \"Marketing Manager\",\n            \"salary\": \"13012.83\",\n            \"hired_at\": \"1997-01-15T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 8,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Brandi Reynolds MD\",\n            \"email\": \"ricardo.bernier@example.org\",\n            \"phone\": 1106274026,\n            \"position\": \"Tractor Operator\",\n            \"salary\": \"5074.97\",\n            \"hired_at\": \"1979-07-20T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Dianna Grady\",\n            \"email\": \"fredrick.bernier@example.net\",\n            \"phone\": 1153750714,\n            \"position\": \"Nutritionist\",\n            \"salary\": \"4884.80\",\n            \"hired_at\": \"1976-10-08T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 20,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Kathryn Sawayn\",\n            \"email\": \"dexter92@example.org\",\n            \"phone\": null,\n            \"position\": \"Social Scientists\",\n            \"salary\": \"6607.25\",\n            \"hired_at\": \"2004-09-25T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 17,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Mrs. Miracle O'Connell III\",\n            \"email\": \"xbogisich@example.net\",\n            \"phone\": null,\n            \"position\": \"Kindergarten Teacher\",\n            \"salary\": \"8358.42\",\n            \"hired_at\": \"1999-01-18T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 17,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Dr. Kaia Davis PhD\",\n            \"email\": \"kuhic.arianna@example.com\",\n            \"phone\": null,\n            \"position\": \"Precision Devices Inspector\",\n            \"salary\": \"4757.56\",\n            \"hired_at\": \"1979-08-31T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 29,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Stacey Daugherty\",\n            \"email\": \"runte.brenda@example.net\",\n            \"phone\": null,\n            \"position\": \"Ship Engineer\",\n            \"salary\": \"6459.36\",\n            \"hired_at\": \"2013-11-01T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 32,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Mr. Jermey Leannon\",\n            \"email\": \"sanford.grant@example.org\",\n            \"phone\": 1184026193,\n            \"position\": \"Technical Program Manager\",\n            \"salary\": \"6146.64\",\n            \"hired_at\": \"1971-08-22T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Jaclyn Carter\",\n            \"email\": \"jkuhn@example.net\",\n            \"phone\": 1128010940,\n            \"position\": \"Insulation Worker\",\n            \"salary\": \"5740.03\",\n            \"hired_at\": \"1981-04-17T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 18,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 21,\n            \"name\": \"Mr. Allen Schuster III\",\n            \"email\": \"jaquelin89@example.org\",\n            \"phone\": 1185812175,\n            \"position\": \"Postal Clerk\",\n            \"salary\": \"11515.97\",\n            \"hired_at\": \"2021-10-11T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 15,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "test-cursor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}test-cursor",
+					"host": [
+						"{{base_url}}test-cursor"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}test-cursor",
+							"host": [
+								"{{base_url}}test-cursor"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 24 Jul 2025 01:00:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "01K0WZ4196YYNSSHCMHKTKXYCZ"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"method\": \"cursor\",\n    \"time\": 0.0441439151763916,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Clifton Schiller\",\n            \"email\": \"tconsidine@example.com\",\n            \"phone\": 1157645050,\n            \"position\": \"Warehouseeeeee\",\n            \"salary\": \"3331.25\",\n            \"hired_at\": \"2010-04-10T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 9,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:33:19.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"mohamed ibrahim\",\n            \"email\": \"reichel.delphine@example.net\",\n            \"phone\": null,\n            \"position\": \"Transportation and Material-Moving\",\n            \"salary\": \"8089.82\",\n            \"hired_at\": \"1986-03-21T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:55:04.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Ricardo Cronaa\",\n            \"email\": \"marquise.kub@example.net\",\n            \"phone\": 1138855917,\n            \"position\": \"Music Director\",\n            \"salary\": \"12117.13\",\n            \"hired_at\": \"2007-03-06T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 1,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T23:42:55.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Carolyn Ortiz DVM\",\n            \"email\": \"jarod67@example.com\",\n            \"phone\": 1148384610,\n            \"position\": \"Home Health Aide\",\n            \"salary\": \"13856.33\",\n            \"hired_at\": \"2019-02-06T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T23:43:16.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Jo Langworth\",\n            \"email\": \"caroline.hand@example.com\",\n            \"phone\": 1162097882,\n            \"position\": \"Plate Finisher\",\n            \"salary\": \"13465.16\",\n            \"hired_at\": \"1983-07-14T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-24T00:56:31.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Lourdes Weimann\",\n            \"email\": \"sadie.price@example.net\",\n            \"phone\": null,\n            \"position\": \"Buffing and Polishing Operator\",\n            \"salary\": \"3567.71\",\n            \"hired_at\": \"2020-06-01T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Mr. Mohammad Wunsch\",\n            \"email\": \"lubowitz.ruby@example.net\",\n            \"phone\": null,\n            \"position\": \"Marine Cargo Inspector\",\n            \"salary\": \"5124.66\",\n            \"hired_at\": \"1979-03-27T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Dr. Buster Bernhard II\",\n            \"email\": \"gladyce95@example.com\",\n            \"phone\": 1176915035,\n            \"position\": \"Power Distributors OR Dispatcher\",\n            \"salary\": \"5394.69\",\n            \"hired_at\": \"1998-01-22T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Delphine Renner\",\n            \"email\": \"bconn@example.org\",\n            \"phone\": null,\n            \"position\": \"Pipefitter\",\n            \"salary\": \"13354.10\",\n            \"hired_at\": \"1976-06-28T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T19:01:26.000000Z\",\n            \"updated_at\": \"2025-07-23T19:01:26.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Cornelius Windler\",\n            \"email\": \"halle.graham@example.org\",\n            \"phone\": 1137872737,\n            \"position\": \"Mechanical Drafter\",\n            \"salary\": \"7776.20\",\n            \"hired_at\": \"1976-01-06T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 2,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Johan Gaylord\",\n            \"email\": \"ugoldner@example.net\",\n            \"phone\": 1190637605,\n            \"position\": \"Marketing Manager\",\n            \"salary\": \"13012.83\",\n            \"hired_at\": \"1997-01-15T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 8,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Brandi Reynolds MD\",\n            \"email\": \"ricardo.bernier@example.org\",\n            \"phone\": 1106274026,\n            \"position\": \"Tractor Operator\",\n            \"salary\": \"5074.97\",\n            \"hired_at\": \"1979-07-20T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Dianna Grady\",\n            \"email\": \"fredrick.bernier@example.net\",\n            \"phone\": 1153750714,\n            \"position\": \"Nutritionist\",\n            \"salary\": \"4884.80\",\n            \"hired_at\": \"1976-10-08T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 20,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Kathryn Sawayn\",\n            \"email\": \"dexter92@example.org\",\n            \"phone\": null,\n            \"position\": \"Social Scientists\",\n            \"salary\": \"6607.25\",\n            \"hired_at\": \"2004-09-25T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 17,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Mrs. Miracle O'Connell III\",\n            \"email\": \"xbogisich@example.net\",\n            \"phone\": null,\n            \"position\": \"Kindergarten Teacher\",\n            \"salary\": \"8358.42\",\n            \"hired_at\": \"1999-01-18T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 17,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Dr. Kaia Davis PhD\",\n            \"email\": \"kuhic.arianna@example.com\",\n            \"phone\": null,\n            \"position\": \"Precision Devices Inspector\",\n            \"salary\": \"4757.56\",\n            \"hired_at\": \"1979-08-31T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 29,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Stacey Daugherty\",\n            \"email\": \"runte.brenda@example.net\",\n            \"phone\": null,\n            \"position\": \"Ship Engineer\",\n            \"salary\": \"6459.36\",\n            \"hired_at\": \"2013-11-01T00:00:00.000000Z\",\n            \"status\": \"inactive\",\n            \"deleted_at\": null,\n            \"department_id\": 32,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Mr. Jermey Leannon\",\n            \"email\": \"sanford.grant@example.org\",\n            \"phone\": 1184026193,\n            \"position\": \"Technical Program Manager\",\n            \"salary\": \"6146.64\",\n            \"hired_at\": \"1971-08-22T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 3,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Jaclyn Carter\",\n            \"email\": \"jkuhn@example.net\",\n            \"phone\": 1128010940,\n            \"position\": \"Insulation Worker\",\n            \"salary\": \"5740.03\",\n            \"hired_at\": \"1981-04-17T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 18,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        },\n        {\n            \"id\": 21,\n            \"name\": \"Mr. Allen Schuster III\",\n            \"email\": \"jaquelin89@example.org\",\n            \"phone\": 1185812175,\n            \"position\": \"Postal Clerk\",\n            \"salary\": \"11515.97\",\n            \"hired_at\": \"2021-10-11T00:00:00.000000Z\",\n            \"status\": \"active\",\n            \"deleted_at\": null,\n            \"department_id\": 15,\n            \"created_at\": \"2025-07-23T21:30:47.000000Z\",\n            \"updated_at\": \"2025-07-23T21:30:47.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		}
+	]
+}
