@@ -28,8 +28,22 @@
         @endforelse
         </tbody>
     </table>
-
-    {{ $employees->links() }}
+    <div class="mt-4 d-flex justify-content-center">
+        <nav>
+            <ul class="pagination pagination-md gap-2">
+                @if ($employees->previousPageUrl())
+                    <li class="page-item">
+                        <a class="page-link px-4" href="{{ $employees->previousPageUrl() }}">« Previous</a>
+                    </li>
+                @endif
+                @if ($employees->nextPageUrl())
+                <li class="page-item">
+                    <a class="page-link px-4" href="{{ $employees->nextPageUrl() }}">Next »</a>
+                </li>
+            @endif
+        </ul>
+    </nav>
+</div>
 
     <a href="{{ route('departments.index') }}" class="btn btn-secondary mt-3">Back to Departments</a>
 </div>
