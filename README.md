@@ -86,7 +86,9 @@ Search & Filter Examples:
 
 ## 🧪 Postman Collection
 
-Import the included Postman collection (postman_collection.json) to test the API endpoints.
+Import the included Postman collection (hr.postman_collection.json) to test the API endpoints.
+
+
 
 ---
 
@@ -135,18 +137,10 @@ routes/
 
 ## 📸 Screenshots
 
-(Add screenshots here if desired for UI views: List, Create, Edit, Deleted Restore, etc.)
+<img width="1892" height="897" alt="Screenshot 2025-07-24 043221" src="https://github.com/user-attachments/assets/08d2eaa1-0a48-4c99-b9f8-72b2d60f08cf" />
+<img width="1903" height="908" alt="Screenshot 2025-07-24 043339" src="https://github.com/user-attachments/assets/4d63348e-ed5c-42e8-98d0-c7746aa86e25" />
+<img width="1891" height="881" alt="Screenshot 2025-07-24 043958" src="https://github.com/user-attachments/assets/a87e2be8-9189-49a9-85fb-b92ddb788b44" />
 
----
-
-## ✅ To Do / Optional Enhancements
-
-- [ ] Authentication with Laravel Sanctum or Breeze  
-- [ ] Employee photo upload  
-- [ ] Export to CSV/PDF  
-- [ ] Bulk delete  
-- [ ] Caching with Redis  
-- [ ] Feature tests  
 
 ---
 
@@ -154,14 +148,9 @@ routes/
 
 This project is licensed under the MIT License.
 
----
-
-## 📅 Deadline
-
-Submission due: Thursday at 4 PM
 
 ---
 
 ## ✨ Author
 
-Noha Sobhy — https://github.com/your-username
+Mohamed Ibrahim — (https://github.com/mohamed101ibrahim)
